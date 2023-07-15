@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "football_betting_backend": {
+      "candid": "src/football_betting_backend/football_betting_backend.did",
+      "package": "football_betting_backend",
+      "type": "rust"
+    },
+    "football_betting_frontend": {
+      "dependencies": [
+        "football_betting_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/football_betting_frontend/src/index.html"
+      },
+      "source": [
+        "src/football_betting_frontend/assets",
+        "dist/football_betting_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

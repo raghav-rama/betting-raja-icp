@@ -1,0 +1,4 @@
+[workspace]
+members = [
+    "src/football_betting_backend",
+]
