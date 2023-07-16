@@ -16,6 +16,11 @@ const App = () => {
     setMessage(greeting);
   }
 
+  async function doGreet3() {
+    const greeting = await football_betting_backend.send_bet();
+    setMessage(greeting);
+  }
+
   return (
     <>
       <div style={{ fontSize: "30px" }}>
@@ -31,6 +36,7 @@ const App = () => {
           />
           <button onClick={doGreet}>Greet</button>
           <button onClick={doGreet2}>Greet2</button>
+          <button onClick={doGreet3}>Greet3</button>
           <div>
             <p>Message from backend:</p>
             <p>{message}</p>
